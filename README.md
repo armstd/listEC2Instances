@@ -25,6 +25,8 @@ optional arguments:
   --secretAccessKey SECRETACCESSKEY
                         AWS Secret access key
   --regionID REGIONID   AWS Region ID
+  --sortBy [SORTBY [SORTBY ...]]
+                        List of fields to sort by
   --attrs [ATTRS [ATTRS ...]]
                         List of instance attributes to display
   --tags [TAGS [TAGS ...]]
