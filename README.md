@@ -96,7 +96,9 @@ $ ./listEC2Instances.py --accessKeyID "ACCESSKEYID" --secretAccessKey "SECRETACC
 ```
 
 ### Displaying a specific list of tags or attributes.
-##### Empty list of attrs and tags (NOTE: fields specified for sorting will be displayed even if not specified)  Not sure why, but you can lol.
+
+#### Empty list of attrs and tags.  Not sure why, but you can lol.
+##### NOTE: fields specified for sorting will be displayed even if not specified
 ```
 $ ./listEC2Instances.py --accessKeyID "ACCESSKEYID" --secretAccessKey "SECRETACCESSKEY" --regionID="us-west-2" --attrs --tags --sortBy
 - {}
