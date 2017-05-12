@@ -7,11 +7,11 @@ List EC2 instances in a region given specified credentials
 Tool which uses AWS API access to list all EC2 instances in any
 single region.  The script works for any number of instances.
 
-# Requirements
+## Requirements
 
 listEC2Instances.py uses Python2.7+ and requires boto3 http://boto3.readthedocs.io/ and PyYAML http://pyyaml.org/
 
-# Commandline Syntax
+## Commandline Syntax
 ```
 usage: listEC2Instances.py [-h] --accessKeyID ACCESSKEYID --secretAccessKey
                            SECRETACCESSKEY --regionID REGIONID
@@ -35,7 +35,7 @@ optional arguments:
 
 ## Examples
 
-# Standard output.  Displays instance id, owner, instance type and launch time.  Sorted by 'Owner' tag ("unknown" if not defined).
+### Standard output.  Displays instance id, owner, instance type and launch time.  Sorted by 'Owner' tag ("unknown" if not defined).
 ```
 $ ./listEC2Instances.py --accessKeyID "ACCESSKEYID" --secretAccessKey "SECRETACCESSKEY" --regionID="us-west-2"
 - id: i-00000000000000003
@@ -56,7 +56,7 @@ $ ./listEC2Instances.py --accessKeyID "ACCESSKEYID" --secretAccessKey "SECRETACC
   tag:Owner: unknown
 ```
 
-# Specify one or more fields to sort by (use "tag:<tagName>" to specify a tag for sorting).
+### Specify one or more fields to sort by (use "tag:<tagName>" to specify a tag for sorting).
 ```
 $ ./listEC2Instances.py --accessKeyID "ACCESSKEYID" --secretAccessKey "SECRETACCESSKEY" --regionID="us-west-2" --sortBy "tag:Owner" id
 - id: i-00000000000000003
@@ -95,8 +95,8 @@ $ ./listEC2Instances.py --accessKeyID "ACCESSKEYID" --secretAccessKey "SECRETACC
   tag:Owner: unknown
 ```
 
-# Displaying a specific list of tags or attributes.
-Empty list of attrs and tags (NOTE: fields specified for sorting will be displayed even if not specified)  Not sure why, but you can lol.
+### Displaying a specific list of tags or attributes.
+#####Empty list of attrs and tags (NOTE: fields specified for sorting will be displayed even if not specified)  Not sure why, but you can lol.
 ```
 $ ./listEC2Instances.py --accessKeyID "ACCESSKEYID" --secretAccessKey "SECRETACCESSKEY" --regionID="us-west-2" --attrs --tags --sortBy
 - {}
@@ -116,7 +116,7 @@ $ ./listEC2Instances.py --accessKeyID "ACCESSKEYID" --secretAccessKey "SECRETACC
 
 ```
 
-# Displaying all tags and attribtutes with "all" keyword
+### Displaying all tags and attribtutes with "all" keyword
 ```
 $ ./listEC2Instances.py --accessKeyID "ACCESSKEYID" --secretAccessKey "SECRETACCESSKEY" --regionID="us-west-2" --attrs all --tags all --sortBy id
 - ami_launch_index: 0
